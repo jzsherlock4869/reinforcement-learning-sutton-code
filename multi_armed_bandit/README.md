@@ -4,4 +4,4 @@
 
 Preliminary results for the 5-armed bandit training for 200 epoches.
 
-![exp_result]("./mab_result.png")
+![exp_result](./mab_result.png)
