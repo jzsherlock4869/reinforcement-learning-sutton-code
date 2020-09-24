@@ -42,6 +42,7 @@ def bandit_algorithm(toy_bandit, n_epoch, action_mode='epsilon_greedy', warm_up=
     return q_list, aver_reward_list, act_selection_aver
 
 if __name__ == "__main__":
+
     NUM_ARMS = 5
     SIG = 1.0
     toy_bandit = GaussianBandit(num_arms=NUM_ARMS, sig=SIG)
