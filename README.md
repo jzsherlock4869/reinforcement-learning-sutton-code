@@ -1,6 +1,14 @@
 # Reinforcement_Learning_Toys
 Some reinforcement learning algorithm implementations. Toy models ~
 
+# Contents 
+
+|  Algorithms  |  Links  |
+|  :----:  | :----: |
+|  Multi-armed bandit  | ![MAB](https://github.com/jzsherlock4869/Reinforcement_Learning_Toys/tree/master/multi_armed_bandit) |
+| Markov decision process  | link |
+
+
 ## Multi-armed Bandits
 
 Multi-armed bandit problem (MAB) is a simple and fundamental example for reinforcement learning, and has been used in real world tasks (recommender sys etc.).
