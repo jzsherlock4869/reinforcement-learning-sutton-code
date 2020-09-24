@@ -5,9 +5,10 @@ Some reinforcement learning algorithm implementations. Toy models ~
 
 |  Algorithms  |  Links  |
 |  :----:  | :----: |
-|  Multi-armed bandit  | ![MAB](https://github.com/jzsherlock4869/Reinforcement_Learning_Toys/tree/master/multi_armed_bandit) |
+|  Multi-armed bandit  | ![link](https://github.com/jzsherlock4869/Reinforcement_Learning_Toys/tree/master/multi_armed_bandit) |
 | Markov decision process  | link |
 
+# Detailed introduction
 
 ## Multi-armed Bandits
 
