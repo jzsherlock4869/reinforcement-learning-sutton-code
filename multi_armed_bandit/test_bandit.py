@@ -35,6 +35,7 @@ if __name__ == "__main__":
     
     # show the change of means of each arm reward 
     # when bandit is unstable
+    # reward each time the corresponding arm is selected
     fig = plt.figure(figsize=(10,10))
     ax1 = fig.add_subplot(211)
     ax2 = fig.add_subplot(212)
@@ -46,11 +47,12 @@ if __name__ == "__main__":
     ax1.set_title('Rewards of Each Arm')
     ax1.set_xlabel('Iterations')
     ax1.set_ylabel('Reward')
+    # reward mean change curve
     ax2.plot(cntr0)
     ax2.plot(cntr1)
     ax2.plot(cntr2)
     ax2.grid()
-    ax1.set_title('Mean of Each Arm of Gaussian Bandit (showing unstability)')
-    ax1.set_xlabel('Iterations')
-    ax1.set_ylabel('Current Mean of Reward')
+    ax2.set_title('Mean of Each Arm of Gaussian Bandit (showing unstability)')
+    ax2.set_xlabel('Iterations')
+    ax2.set_ylabel('Current Mean of Reward')
     plt.show()
