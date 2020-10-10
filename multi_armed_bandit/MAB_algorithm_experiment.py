@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 from bandit import GaussianBandit
 from action_select import select_action_epsilon_greedy, select_action_ucb
 
-def bandit_algorithm(toy_bandit, n_epoch, action_mode='epsilon_greedy', warm_up=True, **params):
+def bandit_algorithm(toy_bandit, n_epoch, action_mode='epsilon_greedy', warm_up=True, alpha=0, **params):
     num_arms = toy_bandit.num_arms
     q_list = [0] * num_arms
     num_act = [0] * num_arms
@@ -34,9 +34,12 @@ def bandit_algorithm(toy_bandit, n_epoch, action_mode='epsilon_greedy', warm_up=
                 t_list[arm_id] += 1
         num_act[arm_id] += 1
         reward = toy_bandit.get_reward(arm_id)
-        q_list[arm_id] = q_list[arm_id] + 1.0 / (num_act[arm_id] + 1) * (reward - q_list[arm_id])
+        if alpha <= 0:
+            alpha = 1.0 / (num_act[arm_id] + 1)
+        q_list[arm_id] = q_list[arm_id] + alpha * (reward - q_list[arm_id])
         cumu_reward += reward
         aver_reward_list.append(cumu_reward / (i + 1) * 1.0)
+        # aver_reward_list.append(toy_bandit.centers[0])
         for each_arm in range(num_arms):
             if each_arm == arm_id:
                 act_selection_aver[each_arm, i] = act_selection_aver[each_arm, max(i-1, 0)] + 1

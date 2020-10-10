@@ -29,5 +29,6 @@ the unstable gaussian bandit is shown below, indicating the mean(reward) of each
 
 comparison alpha stride and common (1/n) stride for unstable MAB problem
 
+![diff_alpha](./result_pics/diff_alpha.png)
 
 
