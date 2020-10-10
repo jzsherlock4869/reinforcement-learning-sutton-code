@@ -12,7 +12,7 @@ Some reinforcement learning algorithm implementations. Toy models ~
 
 ## Multi-armed Bandits
 
-[multi-armed bandit](./multi_armed_bandit/result_pics/mab_comic.png)
+![multi-armed bandit](./multi_armed_bandit/result_pics/mab_comic.png)
 
 Multi-armed bandit problem (MAB) is a simple and fundamental example for reinforcement learning, and has been used in real world tasks (recommender sys etc.).
 
