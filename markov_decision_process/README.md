@@ -3,6 +3,9 @@
 Both MRP and MDP obey Markovian property, i.e. "the future is independent of the past if present state is given".
 
 ## Markov Reward Process (MRP) : the state transition is independent of our actions
+
+![mrp_example](./trans.png)
+
 Markov reward model or Markov reward process is a stochastic process which extends either a Markov chain or continuous-time Markov chain by adding a reward rate to each state. (from [wiki](https://en.wikipedia.org/wiki/Markov_reward_model)).
 
 In MRP, each state returns a reward, and the transition of states are only related to the current state.
