@@ -5,8 +5,8 @@ Some reinforcement learning algorithm implementations. Toy models ~
 
 | Topic |  Link  |
 |  :----:  | :----: |
-|  Multi-armed bandit (epsilon-greedy/UCB) | ![click :satisfied:](./multi_armed_bandit) |
-| Markov decision process  | ![click :sunglasses:](./markov_decision_process) |
+|  :blush: Multi-armed bandit (epsilon-greedy/UCB) | ![click](./multi_armed_bandit) |
+| :blush: Markov decision process  | ![click](./markov_decision_process) |
 
 # Detailed introduction
 
