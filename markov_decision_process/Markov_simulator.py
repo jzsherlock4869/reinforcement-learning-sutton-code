@@ -25,6 +25,11 @@ class MarkovRewardSimulator():
             G.get_node(i).attr['label'] = '{}:v={}'.format(i, self.state_values[i])
         G.layout('dot')
         G.draw(filename)
+    def move_on(self, cur_state):
+        trans_prob = self.trans_mat[cur_state, :]
+        next_state = np.random.choice(list(range(self.num_states)), p=trans_prob)
+        reward = self.state_values[next_state]
+        return next_state, reward
 
 class RandomMarkovRewardSimulator(MarkovRewardSimulator):
     def __init__(self, num_states=5, value_range=[1, 50], seed=None):
@@ -46,3 +51,9 @@ if __name__ == "__main__":
     rand_ms.draw_graph("trans.png")
     img = Image.open("trans.png")
     img.show()
+
+    nxt = 0
+    for _ in range(5):
+        nxt, r = rand_ms.move_on(nxt)
+        print("current state:{}, reward:{}".format(nxt, r))
+    
