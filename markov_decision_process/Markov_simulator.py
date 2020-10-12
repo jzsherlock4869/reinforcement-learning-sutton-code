@@ -9,7 +9,7 @@ import pygraphviz as pgv
 from PIL import Image
 
 
-class MarkovSimulator():
+class MarkovRewardSimulator():
     def __init__(self, trans_mat, state_values):
         assert trans_mat.shape[0] == trans_mat.shape[1]
         assert trans_mat.shape[0] == len(state_values)
@@ -26,21 +26,23 @@ class MarkovSimulator():
         G.layout('dot')
         G.draw(filename)
 
-class RandomMarkovSimulator(MarkovSimulator):
+class RandomMarkovRewardSimulator(MarkovRewardSimulator):
     def __init__(self, num_states=5, value_range=[1, 50], seed=None):
         self.rng = np.random.RandomState(seed=seed)
-        rand_prob = [[self.rng.uniform(0, 2.0 / num_states) for i in range(num_states)] \
-                     for j in range(num_states)]
-        for j, r in enumerate(rand_prob):
-            r[j] += 1 - sum(r)
-        trans_mat = np.array(rand_prob)
+        rand_prob = self.rng.uniform(0, 1, size=(num_states, num_states))
+        for i in range(num_states):
+            rand_prob[i, :] = rand_prob[i, :] / np.sum(rand_prob[i, :])
         state_values = self.rng.randint(low=value_range[0], high=value_range[1], size=num_states)
-        super(RandomMarkovSimulator, self).__init__(trans_mat=trans_mat, state_values=state_values)
+        super(RandomMarkovRewardSimulator, self).__init__(trans_mat=rand_prob, state_values=state_values)
 
 
 if __name__ == "__main__":
-    rand_ms = RandomMarkovSimulator()
+
+    SEED = 2020
+
+    rand_ms = RandomMarkovRewardSimulator(seed=SEED)
     print(rand_ms.trans_mat)
     print(rand_ms.state_values)
     rand_ms.draw_graph("trans.png")
-    Image.open("trans.png")
+    img = Image.open("trans.png")
+    img.show()
