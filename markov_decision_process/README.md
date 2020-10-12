@@ -9,13 +9,17 @@ In MRP, each state returns a reward, and the transition of states are only relat
 
 The transition probability is:
 
-<img src="http://www.forkosh.com/mathtex.cgi?  P(s_{t+1} = S_j | s_t = S_i) ">
-[//]: <> ($$ P(s_{t+1} = S_j | s_t = S_i) $$)
+<img src="http://latex.codecogs.com/gif.latex?P(s_{t+1} = S_j | s_t = S_i) ">
+
+[^_^]:
+    ($$ P(s_{t+1} = S_j | s_t = S_i) $$)
 
 The reward of each state is defined as a one-param function:
 
-<img src="http://www.forkosh.com/mathtex.cgi? R(s_t = S_i) = E[r_t | s_t = S_i]">
-[//]: <> ($$ R(s_t = S_i) = E[r_t | s_t = S_i] $$)
+<img src="http://latex.codecogs.com/gif.latex?R(s_t = S_i) = E[r_t | s_t = S_i]">
+
+[^_^]:
+    ($$ R(s_t = S_i) = E[r_t | s_t = S_i] $$)
 
 
 ## Markov Decision Process (MDP) : the state transition controlled by current state and action.
@@ -24,12 +28,16 @@ Markov decision process (MDP) is a discrete-time stochastic control process. It 
 
 The transition probability from state S_i to S_j under action A_k is defined as follows:
 
-<img src="http://www.forkosh.com/mathtex.cgi? P(s_{t+1} = S_j | s_t = S_i, a_t = A_k) ">
-[//] <> ($$ P(s_{t+1} = S_j | s_t = S_i, a_t = A_k) $$)
+<img src="http://latex.codecogs.com/gif.latex?P(s_{t+1} = S_j | s_t = S_i, a_t = A_k) ">
+
+[^_^]:
+    ($$ P(s_{t+1} = S_j | s_t = S_i, a_t = A_k) $$)
 
 The reward function of MDP has two parameters:
 
-<img src="http://www.forkosh.com/mathtex.cgi? R(s_t = S_i, a = A_k) = E[r_{t+1} | s_t = S_i, a = A_k]">
-[//] <> ($$ R(s_t = S_i, a = A_k) = E[r_{t+1} | s_t = S_i, a = A_k] $$)
+<img src="http://latex.codecogs.com/gif.latex?R(s_t = S_i, a = A_k) = E[r_{t+1} | s_t = S_i, a = A_k]">
+
+[^_^]:
+    ($$ R(s_t = S_i, a = A_k) = E[r_{t+1} | s_t = S_i, a = A_k] $$)
 
 
