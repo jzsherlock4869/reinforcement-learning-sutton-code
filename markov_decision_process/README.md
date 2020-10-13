@@ -4,7 +4,7 @@ Both MRP and MDP obey Markovian property, i.e. "the future is independent of the
 
 ## Markov Reward Process (MRP) : the state transition is independent of our actions
 
-![mrp_example](./trans.png)
+![mrp_example](./result_pics/trans.png)
 
 Markov reward model or Markov reward process is a stochastic process which extends either a Markov chain or continuous-time Markov chain by adding a reward rate to each state. (from [wiki](https://en.wikipedia.org/wiki/Markov_reward_model)).
 
@@ -77,6 +77,10 @@ current values: [ 97.56753252 113.45814912  96.51037459 101.50400946 111.3547316
 ```
 
 ## Markov Decision Process (MDP) : the state transition controlled by current state and action.
+
+![mrp_mdp](./result_pics/mrp_mdp.png)
+
+Left means MRP, right is MDP. Actions matter in MDP!
 
 Markov decision process (MDP) is a discrete-time stochastic control process. It provides a mathematical framework for modeling decision making in situations where outcomes are partly random and partly under the control of a decision maker. (from [wiki](https://en.wikipedia.org/wiki/Markov_decision_process)) 
 
