@@ -25,7 +25,7 @@ def test_epsilon_greedy(toy_bandit, n_epoch=2000, warm_up=False, epsilon=0.1):
     ax1.set_title('Average reward vs. Iter')
     ax1.set_xlabel('Iterations')
     ax1.set_ylabel('Average reward')
-    
+
     for each_arm in range(len(q_list)):
         ax2.plot(act_selection_aver[each_arm])
     ax2.grid()
@@ -37,7 +37,7 @@ def test_epsilon_greedy(toy_bandit, n_epoch=2000, warm_up=False, epsilon=0.1):
 
     fig = plt.figure(figsize=(5, 5))
     ax1 = fig.add_subplot(111)
-    
+
     ax1.bar(x=[i - 0.2 for i in range(len(q_list))], \
         height=q_list, width=0.4, color='r', label="Q value for each arm")
     ax1.bar(x=[i + 0.2 for i in range(len(q_list))], \
@@ -76,6 +76,7 @@ def test_ucb_select(toy_bandit, n_epoch=200, warm_up=False, action_mode='ucb', c
 
 def test_unstable_bandit(unstable_bandit, n_epoch=2000, warm_up=False, epsilon=0.1, alpha=[0, 0.1]):
     aver_reward_list_all = []
+    alpha = [0] + alpha
     for idx, each_alpha in enumerate(alpha):
         unstable_bandit = UnstableGaussianBandit(num_arms=unstable_bandit.num_arms, \
             sig=unstable_bandit.sigma, \
@@ -89,6 +90,8 @@ def test_unstable_bandit(unstable_bandit, n_epoch=2000, warm_up=False, epsilon=0
                         = bandit_algorithm(toy_bandit=unstable_bandit, \
                             n_epoch=n_epoch, warm_up=warm_up, epsilon=epsilon, alpha=each_alpha)
         aver_reward_list_all.append(aver_reward_list)
+    
+    alpha = alpha[1:]
     fig = plt.figure(figsize=(10,10))
     ax1 = fig.add_subplot(111)
     fig.subplots_adjust(wspace=None, hspace=0.3)
@@ -103,12 +106,12 @@ def test_unstable_bandit(unstable_bandit, n_epoch=2000, warm_up=False, epsilon=0
 
 
 if __name__ == "__main__":
-    
+
     NUM_ARMS = 5
-    SIG = 2.0
+    SIG = 5.0
     AMP = 2.0
-    INTERVAL = 200
-    EPOCH = 10000
+    INTERVAL = 5000
+    EPOCH = 100000
     SEED = 2020
 
     toy_bandit = GaussianBandit(num_arms=NUM_ARMS, sig=SIG, seed=SEED)
