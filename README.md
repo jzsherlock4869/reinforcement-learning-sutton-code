@@ -1,5 +1,5 @@
-# Reinforcement_Learning_Toys
-Some reinforcement learning algorithm implementations. Toy models ~
+#  Reinforcement-Learning-An-Introduction-Sutton-Barto-Code-Implementations 
+Code implementations of methods in ![Reinforcement Learning: An Introduction](https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf) .
 
 ![jzsherlock4869's GitHub stats](https://github-readme-stats.vercel.app/api?username=jzsherlock4869&show_icons=true&theme=radical)
 
@@ -7,8 +7,8 @@ Some reinforcement learning algorithm implementations. Toy models ~
 
 | Topic |  Link  |
 |  :----:  | :----: |
-|  :blush: Multi-armed bandit (epsilon-greedy/UCB) | ![click](./multi_armed_bandit) |
-| :sunglasses: Markov decision process  | ![click](./markov_decision_process) |
+| Chapter-1 Multi-armed bandit (epsilon-greedy/UCB) | ![click](./multi_armed_bandit) |
+| Chapter-2 Markov decision process  | ![click](./markov_decision_process) |
 
 # Detailed introduction
 
