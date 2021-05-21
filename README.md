@@ -1,4 +1,5 @@
-#  Reinforcement-Learning-An-Introduction-Sutton-Barto-Code-Implementations 
+#  Reinforcement Learning: An Introduction by Sutton & Barto
+## Code-Implementations 
 Code implementations of methods in ![Reinforcement Learning: An Introduction](https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf) .
 
 ![jzsherlock4869's GitHub stats](https://github-readme-stats.vercel.app/api?username=jzsherlock4869&show_icons=true&theme=radical)
@@ -32,7 +33,7 @@ Both MRP and MDP obey Markovian property, i.e. "the future is independent of the
 
 ### Markov Reward Process (MRP) : the state transition is independent of our actions
 
-![mrp_example](./markov_decision_process/trans.png)
+![mrp_example](./markov_decision_process/result_pics/trans.png)
 
 Markov reward model or Markov reward process is a stochastic process which extends either a Markov chain or continuous-time Markov chain by adding a reward rate to each state. (from [wiki](https://en.wikipedia.org/wiki/Markov_reward_model)).
 
