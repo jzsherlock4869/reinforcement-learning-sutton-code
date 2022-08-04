@@ -1,6 +1,6 @@
 #  Reinforcement Learning: An Introduction by Sutton & Barto
 ## Code-Implementations 
-Code implementations of methods in ![Reinforcement Learning: An Introduction](https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf) .
+Code implementations of methods in [Reinforcement Learning: An Introduction](https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf) .
 
 ![jzsherlock4869's GitHub stats](https://github-readme-stats.vercel.app/api?username=jzsherlock4869&show_icons=true&theme=radical)
 
