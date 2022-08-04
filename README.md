@@ -8,8 +8,8 @@ Code implementations of methods in [Reinforcement Learning: An Introduction](htt
 
 | Topic |  Link  |
 |  :----:  | :----: |
-| Chapter-1 Multi-armed bandit (epsilon-greedy/UCB) | ![click](./multi_armed_bandit) |
-| Chapter-2 Markov decision process  | ![click](./markov_decision_process) |
+| Chapter-1 Multi-armed bandit (epsilon-greedy/UCB) | [click](./multi_armed_bandit) |
+| Chapter-2 Markov decision process  | [click](./markov_decision_process) |
 
 # Detailed introduction
 
